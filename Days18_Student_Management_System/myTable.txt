@@ -1,0 +1,28 @@
+create table branch(
+branchid int primary key auto_increment,
+branchname VARCHAR(100) NOT NULL unique
+);
+
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    branchid int,
+    FOREIGN KEY (branchid) REFERENCES branch(branchid)
+    
+);
+
+Create table Course(
+courseid int primary key auto_increment,
+coursename varchar(50)  NOT NULL UNIQUE,
+fee double NOT NULL
+);
+
+CREATE TABLE REGISTRATION(
+regid INT primary key auto_increment,
+studentid int,
+courseid int,
+feespaid double,
+foreign key(studentid) references student(id),
+FOREIGN KEY (courseid) REFERENCES Course(courseid)
+);
