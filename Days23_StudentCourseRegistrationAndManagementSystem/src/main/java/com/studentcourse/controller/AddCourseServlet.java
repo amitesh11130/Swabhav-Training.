@@ -15,11 +15,9 @@ public class AddCourseServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	private CourseDAO courseDAO;
-
 	@Override
 	public void init() throws ServletException {
-		courseDAO = new CourseDAO();
+		new CourseDAO();
 		System.out.println("AddCourseServlet initialized via init()");
 	}
 
