@@ -2,6 +2,7 @@
 *.class
 
 # Eclipse files
+.idea/
 .project
 .classpath
 .settings/
